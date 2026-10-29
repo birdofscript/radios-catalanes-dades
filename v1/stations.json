@@ -177,6 +177,7 @@
       "fallbackUrls": [],
       "website": "https://ib3.org",
       "logo": "ib3",
+      "badge": "Música",
       "hasIcyMetadata": true,
       "lang": "ca",
       "loudnessLufs": -19.5
@@ -192,6 +193,7 @@
       "fallbackUrls": [],
       "website": "https://ib3.org",
       "logo": "ib3",
+      "badge": "Menorca",
       "hasIcyMetadata": false,
       "lang": "ca",
       "loudnessLufs": -19.7
@@ -207,6 +209,7 @@
       "fallbackUrls": [],
       "website": "https://ib3.org",
       "logo": "ib3",
+      "badge": "Pitiüses",
       "hasIcyMetadata": false,
       "lang": "ca",
       "loudnessLufs": -17.4

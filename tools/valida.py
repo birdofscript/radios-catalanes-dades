@@ -47,6 +47,12 @@ def main():
             avisos.append(f"{nom}: 'category' desconeguda")
         if s.get("streamType") not in TIPUS:
             avisos.append(f"{nom}: 'streamType' desconegut")
+        badge = s.get("badge")
+        if badge is not None and not (isinstance(badge, str) and 1 <= len(badge.strip()) <= 12):
+            avisos.append(f"{nom}: 'badge' ha de tenir d'1 a 12 caràcters (l'app no el mostrarà)")
+        color = s.get("badgeColor")
+        if color is not None and not re.fullmatch(r"#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?", str(color)):
+            avisos.append(f"{nom}: 'badgeColor' ha de ser #RRGGBB o #AARRGGBB")
         logo = s.get("logo") or s.get("id")
         if not os.path.exists(os.path.join(ROOT, "v1", "logos", f"{logo}.webp")):
             avisos.append(f"{nom}: falta v1/logos/{logo}.webp")
