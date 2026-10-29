@@ -13,7 +13,8 @@
       "website": "https://www.3cat.cat/catradio/",
       "logo": "catradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -18.7
     },
     {
       "id": "rac1",
@@ -27,7 +28,8 @@
       "website": "https://www.rac1.cat",
       "logo": "rac1",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -16.1
     },
     {
       "id": "catinfo",
@@ -41,7 +43,8 @@
       "website": "https://www.3cat.cat/catalunyainformacio/",
       "logo": "catinfo",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -15.2
     },
     {
       "id": "icat",
@@ -55,7 +58,8 @@
       "website": "https://www.3cat.cat/icat/",
       "logo": "icat",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -10.7
     },
     {
       "id": "catmusica",
@@ -69,7 +73,8 @@
       "website": "https://www.3cat.cat/catmusica/",
       "logo": "catmusica",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -21.3
     },
     {
       "id": "rac105",
@@ -83,7 +88,8 @@
       "website": "https://www.rac105.cat",
       "logo": "rac105",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -11.7
     },
     {
       "id": "flaixfm",
@@ -97,7 +103,8 @@
       "website": "https://www.flaixfm.cat",
       "logo": "flaixfm",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -7.7
     },
     {
       "id": "flaixbac",
@@ -111,7 +118,8 @@
       "website": "https://www.flaixbac.cat",
       "logo": "flaixbac",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -8.4
     },
     {
       "id": "radio4",
@@ -125,7 +133,8 @@
       "website": "https://www.rtve.es/play/radio/radio-4/",
       "logo": "radio4",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -16.7
     },
     {
       "id": "apuntfm",
@@ -139,7 +148,8 @@
       "website": "https://www.apuntmedia.es",
       "logo": "apuntfm",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.9
     },
     {
       "id": "ib3",
@@ -153,7 +163,8 @@
       "website": "https://ib3.org",
       "logo": "ib3",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -21.7
     },
     {
       "id": "ib3musica",
@@ -167,7 +178,8 @@
       "website": "https://ib3.org",
       "logo": "ib3",
       "hasIcyMetadata": true,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.5
     },
     {
       "id": "ib3menorca",
@@ -181,7 +193,8 @@
       "website": "https://ib3.org",
       "logo": "ib3",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.7
     },
     {
       "id": "ib3pitiuses",
@@ -195,7 +208,8 @@
       "website": "https://ib3.org",
       "logo": "ib3",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -17.4
     },
     {
       "id": "onamed",
@@ -211,7 +225,8 @@
       "website": "https://www.onamediterrania.cat",
       "logo": "onamed",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -15.3
     },
     {
       "id": "alcudiaradio",
@@ -225,7 +240,8 @@
       "website": "https://www.alcudia.net",
       "logo": "alcudiaradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -17.2
     },
     {
       "id": "rna",
@@ -239,7 +255,8 @@
       "website": "https://www.rtva.ad/en-directe/rna",
       "logo": "rna",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -22.8
     },
     {
       "id": "andorramusica",
@@ -253,7 +270,8 @@
       "website": "https://www.rtva.ad/en-directe/am",
       "logo": "andorramusica",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -20.5
     },
     {
       "id": "arrels",
@@ -267,7 +285,8 @@
       "website": "https://www.radioarrels.cat",
       "logo": "arrels",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -8.6
     },
     {
       "id": "radioestel",
@@ -281,7 +300,8 @@
       "website": "https://www.radioestel.cat",
       "logo": "radioestel",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -13.8
     },
     {
       "id": "gironafm",
@@ -295,7 +315,8 @@
       "website": "https://www.gironafm.cat",
       "logo": "gironafm",
       "hasIcyMetadata": true,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -8.6
     },
     {
       "id": "ua1lleida",
@@ -309,7 +330,8 @@
       "website": "https://www.ua1.cat",
       "logo": "ua1lleida",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -13.6
     },
     {
       "id": "tarragonaradio",
@@ -325,7 +347,8 @@
       "website": "https://www.tarragonaradio.cat",
       "logo": "tarragonaradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.2
     },
     {
       "id": "el9fm",
@@ -341,7 +364,8 @@
       "website": "https://el9fm.cat",
       "logo": "el9fm",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -9.3
     },
     {
       "id": "radiovic",
@@ -355,7 +379,8 @@
       "website": "https://www.radiovic.cat",
       "logo": "radiovic",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -15.7
     },
     {
       "id": "voltregaradio",
@@ -369,7 +394,8 @@
       "website": "https://www.radiovoltrega.com",
       "logo": "voltregaradio",
       "hasIcyMetadata": true,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -12.6
     },
     {
       "id": "radioolot",
@@ -385,7 +411,8 @@
       "website": "https://www.radiolot.cat",
       "logo": "radioolot",
       "hasIcyMetadata": true,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -8.1
     },
     {
       "id": "radiomarina",
@@ -401,7 +428,8 @@
       "website": "https://www.radiomarina.cat",
       "logo": "radiomarina",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -15.6
     },
     {
       "id": "palafrugell",
@@ -415,7 +443,8 @@
       "website": "https://www.radiopalafrugell.cat",
       "logo": "palafrugell",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -14.4
     },
     {
       "id": "radiosabadell",
@@ -429,7 +458,8 @@
       "website": "https://www.radiosabadell.fm",
       "logo": "radiosabadell",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -20.9
     },
     {
       "id": "terrassaradio",
@@ -443,7 +473,8 @@
       "website": "https://canalterrassa.cat/radio",
       "logo": "terrassaradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.0
     },
     {
       "id": "coolturafm",
@@ -471,7 +502,8 @@
       "website": "https://www.cugat.cat",
       "logo": "cugatmedia",
       "hasIcyMetadata": true,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.3
     },
     {
       "id": "ampostaradio",
@@ -501,7 +533,8 @@
       "website": "https://www.laplanaradio.cat",
       "logo": "laplanaradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.6
     },
     {
       "id": "onamar",
@@ -515,7 +548,8 @@
       "website": "https://onamar.net",
       "logo": "onamar",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -8.6
     },
     {
       "id": "radiob",
@@ -529,7 +563,8 @@
       "website": "https://www.radiob.cat",
       "logo": "radiob",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -20.8
     },
     {
       "id": "radiosantboi",
@@ -543,7 +578,8 @@
       "website": "",
       "logo": "radiosantboi",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -14.0
     },
     {
       "id": "radiosilenci",
@@ -557,7 +593,8 @@
       "website": "https://www.radiosilenci.cat",
       "logo": "radiosilenci",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.0
     },
     {
       "id": "radiopuigreig",
@@ -571,7 +608,8 @@
       "website": "https://www.radiopuig-reig.net",
       "logo": "radiopuigreig",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -7.8
     },
     {
       "id": "ripolletradio",
@@ -585,7 +623,8 @@
       "website": "https://www.ripolletradio.cat",
       "logo": "ripolletradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -12.1
     },
     {
       "id": "radiocalella",
@@ -599,7 +638,8 @@
       "website": "https://www.radiocalellatv.cat",
       "logo": "radiocalella",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -13.3
     },
     {
       "id": "radiodesvern",
@@ -613,7 +653,8 @@
       "website": "",
       "logo": "radiodesvern",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -15.3
     },
     {
       "id": "radiocastelldefels",
@@ -627,7 +668,8 @@
       "website": "",
       "logo": "radiocastelldefels",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -19.8
     },
     {
       "id": "radiotarrega",
@@ -641,7 +683,8 @@
       "website": "https://www.radiotarrega.cat",
       "logo": "radiotarrega",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -9.0
     },
     {
       "id": "radiorapita",
@@ -655,7 +698,8 @@
       "website": "https://www.radiorapita.cat",
       "logo": "radiorapita",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -14.0
     },
     {
       "id": "imaginaradio",
@@ -669,7 +713,8 @@
       "website": "",
       "logo": "imaginaradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "loudnessLufs": -13.6
     }
   ]
 }
