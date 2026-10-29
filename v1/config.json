@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minAppVersionCode": 5,
+  "announcement": null,
+  "features": {
+    "news": false,
+    "ads": false,
+    "chat": false
+  }
+}

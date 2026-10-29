@@ -1,0 +1,12 @@
+name: Valida
+on:
+  push:
+    paths: ["v1/**", "tools/valida.py"]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  valida:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/valida.py
