@@ -1,4 +1,5 @@
 # Cada 15 minuts: notícies de cada zona a la branca `noticies` (un sol commit, sense historial).
+# Cada passada engega la següent (el cron de GitHub sovint no arrenca); el cron queda de reserva.
 name: Notícies
 on:
   schedule:
@@ -6,14 +7,16 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: noticies
   cancel-in-progress: false
 jobs:
   agrega:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
+      - run: echo "INICI=$(date +%s)" >> "$GITHUB_ENV"
       - uses: actions/checkout@v4
       - uses: actions/cache/restore@v4
         with:
@@ -43,3 +46,11 @@ jobs:
         with:
           path: estat.json
           key: noticies-estat-${{ github.run_id }}
+      - name: Encadena la següent
+        if: ${{ !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          espera=$(( INICI + 840 - $(date +%s) ))
+          if [ "$espera" -gt 0 ]; then sleep "$espera"; fi
+          gh workflow run noticies.yml --repo "${{ github.repository }}" --ref main
