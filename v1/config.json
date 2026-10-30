@@ -3,8 +3,9 @@
   "minAppVersionCode": 5,
   "announcement": null,
   "features": {
-    "news": false,
+    "news": true,
     "ads": false,
-    "chat": false
+    "chat": false,
+    "weather": true
   }
 }

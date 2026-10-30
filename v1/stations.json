@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "stations": [
     {
       "id": "catradio",
@@ -25,6 +25,7 @@
       "streamUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_1.mp3",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_1AAC.aac",
       "website": "https://www.rac1.cat",
       "logo": "rac1",
       "hasIcyMetadata": false,
@@ -130,6 +131,7 @@
       "streamUrl": "https://dispatcher.rndfnk.com/crtve/rner4/main/mp3/high",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://dispatcher.rndfnk.com/crtve/rner4/main/aac/low",
       "website": "https://www.rtve.es/play/radio/radio-4/",
       "logo": "radio4",
       "hasIcyMetadata": false,
@@ -196,7 +198,13 @@
       "badge": "Menorca",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -19.7
+      "loudnessLufs": -19.7,
+      "place": {
+        "name": "Maó",
+        "area": "Menorca",
+        "lat": 39.8894,
+        "lon": 4.2642
+      }
     },
     {
       "id": "ib3pitiuses",
@@ -212,7 +220,13 @@
       "badge": "Pitiüses",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -17.4
+      "loudnessLufs": -17.4,
+      "place": {
+        "name": "Eivissa",
+        "area": "Eivissa",
+        "lat": 38.9089,
+        "lon": 1.4328
+      }
     },
     {
       "id": "onamed",
@@ -240,11 +254,18 @@
       "streamUrl": "https://streaming.enacast.com/alcudiaradio128.mp3",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://streaming.enacast.com/alcudiaradio56.mp3",
       "website": "https://www.alcudia.net",
       "logo": "alcudiaradio",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -17.2
+      "loudnessLufs": -17.2,
+      "place": {
+        "name": "Alcúdia",
+        "area": "Mallorca",
+        "lat": 39.8525,
+        "lon": 3.1192
+      }
     },
     {
       "id": "rna",
@@ -315,11 +336,18 @@
       "streamUrl": "https://enacast.com/gironafm/streams/HD",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://enacast.com/gironafm/streams/SD",
       "website": "https://www.gironafm.cat",
       "logo": "gironafm",
       "hasIcyMetadata": true,
       "lang": "ca",
-      "loudnessLufs": -8.6
+      "loudnessLufs": -8.6,
+      "place": {
+        "name": "Girona",
+        "area": "Gironès",
+        "lat": 41.9833,
+        "lon": 2.8167
+      }
     },
     {
       "id": "ua1lleida",
@@ -334,7 +362,13 @@
       "logo": "ua1lleida",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -13.6
+      "loudnessLufs": -13.6,
+      "place": {
+        "name": "Lleida",
+        "area": "Segrià",
+        "lat": 41.6167,
+        "lon": 0.6333
+      }
     },
     {
       "id": "tarragonaradio",
@@ -351,7 +385,13 @@
       "logo": "tarragonaradio",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -19.2
+      "loudnessLufs": -19.2,
+      "place": {
+        "name": "Tarragona",
+        "area": "Tarragonès",
+        "lat": 41.1175,
+        "lon": 1.2528
+      }
     },
     {
       "id": "el9fm",
@@ -368,7 +408,13 @@
       "logo": "el9fm",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -9.3
+      "loudnessLufs": -9.3,
+      "place": {
+        "name": "Vic",
+        "area": "Osona",
+        "lat": 41.9304,
+        "lon": 2.2546
+      }
     },
     {
       "id": "radiovic",
@@ -383,7 +429,13 @@
       "logo": "radiovic",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -15.7
+      "loudnessLufs": -15.7,
+      "place": {
+        "name": "Vic",
+        "area": "Osona",
+        "lat": 41.9304,
+        "lon": 2.2546
+      }
     },
     {
       "id": "voltregaradio",
@@ -398,7 +450,13 @@
       "logo": "voltregaradio",
       "hasIcyMetadata": true,
       "lang": "ca",
-      "loudnessLufs": -12.6
+      "loudnessLufs": -12.6,
+      "place": {
+        "name": "Sant Hipòlit de Voltregà",
+        "area": "Osona",
+        "lat": 42.0172,
+        "lon": 2.2389
+      }
     },
     {
       "id": "radioolot",
@@ -415,7 +473,13 @@
       "logo": "radioolot",
       "hasIcyMetadata": true,
       "lang": "ca",
-      "loudnessLufs": -8.1
+      "loudnessLufs": -8.1,
+      "place": {
+        "name": "Olot",
+        "area": "Garrotxa",
+        "lat": 42.1822,
+        "lon": 2.489
+      }
     },
     {
       "id": "radiomarina",
@@ -432,7 +496,13 @@
       "logo": "radiomarina",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -15.6
+      "loudnessLufs": -15.6,
+      "place": {
+        "name": "Blanes",
+        "area": "Selva",
+        "lat": 41.674,
+        "lon": 2.7921
+      }
     },
     {
       "id": "palafrugell",
@@ -447,7 +517,13 @@
       "logo": "palafrugell",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -14.4
+      "loudnessLufs": -14.4,
+      "place": {
+        "name": "Palafrugell",
+        "area": "Baix Empordà",
+        "lat": 41.9182,
+        "lon": 3.163
+      }
     },
     {
       "id": "radiosabadell",
@@ -462,7 +538,13 @@
       "logo": "radiosabadell",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -20.9
+      "loudnessLufs": -20.9,
+      "place": {
+        "name": "Sabadell",
+        "area": "Vallès Occidental",
+        "lat": 41.5483,
+        "lon": 2.1075
+      }
     },
     {
       "id": "terrassaradio",
@@ -477,7 +559,13 @@
       "logo": "terrassaradio",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -19.0
+      "loudnessLufs": -19.0,
+      "place": {
+        "name": "Terrassa",
+        "area": "Vallès Occidental",
+        "lat": 41.5611,
+        "lon": 2.0081
+      }
     },
     {
       "id": "coolturafm",
@@ -491,7 +579,13 @@
       "website": "https://www.coolturafm.cat",
       "logo": "coolturafm",
       "hasIcyMetadata": true,
-      "lang": "ca"
+      "lang": "ca",
+      "place": {
+        "name": "Barcelona",
+        "area": "Barcelonès",
+        "lat": 41.3825,
+        "lon": 2.1769
+      }
     },
     {
       "id": "cugatmedia",
@@ -502,11 +596,18 @@
       "streamUrl": "https://directe.cugat.cat/directeHQ.mp3",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://directe.cugat.cat/directe.mp3",
       "website": "https://www.cugat.cat",
       "logo": "cugatmedia",
       "hasIcyMetadata": true,
       "lang": "ca",
-      "loudnessLufs": -19.3
+      "loudnessLufs": -19.3,
+      "place": {
+        "name": "Sant Cugat del Vallès",
+        "area": "Vallès Occidental",
+        "lat": 41.4735,
+        "lon": 2.0852
+      }
     },
     {
       "id": "ampostaradio",
@@ -520,7 +621,13 @@
       "website": "https://www.amposta.cat",
       "logo": "ampostaradio",
       "hasIcyMetadata": false,
-      "lang": "ca"
+      "lang": "ca",
+      "place": {
+        "name": "Amposta",
+        "area": "Montsià",
+        "lat": 40.7106,
+        "lon": 0.5808
+      }
     },
     {
       "id": "laplanaradio",
@@ -533,11 +640,18 @@
       "fallbackUrls": [
         "http://streaming.enantena.com:8000/laplanaradio56.mp3"
       ],
+      "lowBitrateUrl": "https://streaming.enacast.com/laplanaradio56.mp3",
       "website": "https://www.laplanaradio.cat",
       "logo": "laplanaradio",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -19.6
+      "loudnessLufs": -19.6,
+      "place": {
+        "name": "Santa Bàrbara",
+        "area": "Montsià",
+        "lat": 40.7146,
+        "lon": 0.4929
+      }
     },
     {
       "id": "onamar",
@@ -552,7 +666,13 @@
       "logo": "onamar",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -8.6
+      "loudnessLufs": -8.6,
+      "place": {
+        "name": "Badalona",
+        "area": "Barcelonès",
+        "lat": 41.4333,
+        "lon": 2.2333
+      }
     },
     {
       "id": "radiob",
@@ -563,11 +683,18 @@
       "streamUrl": "https://streaming.enacast.com/radiob128.mp3",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://streaming.enacast.com/radiob56.mp3",
       "website": "https://www.radiob.cat",
       "logo": "radiob",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -20.8
+      "loudnessLufs": -20.8,
+      "place": {
+        "name": "Badalona",
+        "area": "Barcelonès",
+        "lat": 41.4333,
+        "lon": 2.2333
+      }
     },
     {
       "id": "radiosantboi",
@@ -582,7 +709,13 @@
       "logo": "radiosantboi",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -14.0
+      "loudnessLufs": -14.0,
+      "place": {
+        "name": "Sant Boi de Llobregat",
+        "area": "Baix Llobregat",
+        "lat": 41.3458,
+        "lon": 2.0417
+      }
     },
     {
       "id": "radiosilenci",
@@ -593,11 +726,18 @@
       "streamUrl": "https://streaming.enacast.com/radiosilenci128.mp3",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://streaming.enacast.com/radiosilenci56.mp3",
       "website": "https://www.radiosilenci.cat",
       "logo": "radiosilenci",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -19.0
+      "loudnessLufs": -19.0,
+      "place": {
+        "name": "la Garriga",
+        "area": "Vallès Oriental",
+        "lat": 41.6804,
+        "lon": 2.2833
+      }
     },
     {
       "id": "radiopuigreig",
@@ -608,11 +748,18 @@
       "streamUrl": "https://streaming.enacast.com/radiopuigreig128.mp3",
       "streamType": "mp3",
       "fallbackUrls": [],
+      "lowBitrateUrl": "https://streaming.enacast.com/radiopuigreig56.mp3",
       "website": "https://www.radiopuig-reig.net",
       "logo": "radiopuigreig",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -7.8
+      "loudnessLufs": -7.8,
+      "place": {
+        "name": "Puig-reig",
+        "area": "Berguedà",
+        "lat": 41.9742,
+        "lon": 1.8806
+      }
     },
     {
       "id": "ripolletradio",
@@ -627,7 +774,13 @@
       "logo": "ripolletradio",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -12.1
+      "loudnessLufs": -12.1,
+      "place": {
+        "name": "Ripollet",
+        "area": "Vallès Occidental",
+        "lat": 41.4965,
+        "lon": 2.1534
+      }
     },
     {
       "id": "radiocalella",
@@ -642,7 +795,13 @@
       "logo": "radiocalella",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -13.3
+      "loudnessLufs": -13.3,
+      "place": {
+        "name": "Calella",
+        "area": "Maresme",
+        "lat": 41.6169,
+        "lon": 2.6642
+      }
     },
     {
       "id": "radiodesvern",
@@ -657,7 +816,13 @@
       "logo": "radiodesvern",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -15.3
+      "loudnessLufs": -15.3,
+      "place": {
+        "name": "Sant Just Desvern",
+        "area": "Baix Llobregat",
+        "lat": 41.3833,
+        "lon": 2.075
+      }
     },
     {
       "id": "radiocastelldefels",
@@ -672,7 +837,13 @@
       "logo": "radiocastelldefels",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -19.8
+      "loudnessLufs": -19.8,
+      "place": {
+        "name": "Castelldefels",
+        "area": "Baix Llobregat",
+        "lat": 41.28,
+        "lon": 1.9767
+      }
     },
     {
       "id": "radiotarrega",
@@ -687,7 +858,13 @@
       "logo": "radiotarrega",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -9.0
+      "loudnessLufs": -9.0,
+      "place": {
+        "name": "Tàrrega",
+        "area": "Urgell",
+        "lat": 41.6464,
+        "lon": 1.1394
+      }
     },
     {
       "id": "radiorapita",
@@ -702,7 +879,13 @@
       "logo": "radiorapita",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -14.0
+      "loudnessLufs": -14.0,
+      "place": {
+        "name": "la Ràpita",
+        "area": "Montsià",
+        "lat": 40.6203,
+        "lon": 0.5927
+      }
     },
     {
       "id": "imaginaradio",
@@ -717,7 +900,13 @@
       "logo": "imaginaradio",
       "hasIcyMetadata": false,
       "lang": "ca",
-      "loudnessLufs": -13.6
+      "loudnessLufs": -13.6,
+      "place": {
+        "name": "Tortosa",
+        "area": "Baix Ebre",
+        "lat": 40.8125,
+        "lon": 0.5211
+      }
     }
   ]
 }
