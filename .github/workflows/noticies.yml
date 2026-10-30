@@ -1,0 +1,45 @@
+# Cada 15 minuts: notícies de cada zona a la branca `noticies` (un sol commit, sense historial).
+name: Notícies
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: noticies
+  cancel-in-progress: false
+jobs:
+  agrega:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/cache/restore@v4
+        with:
+          path: estat.json
+          key: noticies-estat-${{ github.run_id }}
+          restore-keys: noticies-estat-
+      - name: Branca de notícies
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          url="https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git"
+          git clone -q --depth 1 --branch noticies "$url" sortida || { git init -q sortida && git -C sortida remote add origin "$url"; }
+      - name: Agrega
+        run: python3 noticies/agrega.py --sortida sortida/v1/noticies --estat estat.json
+      - name: Publica si ha canviat
+        working-directory: sortida
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git rev-parse -q --verify HEAD >/dev/null && git diff --cached --quiet; then echo "Sense canvis."; exit 0; fi
+          git checkout -q --orphan nova
+          git commit -q -m "Notícies"
+          git push -q -f origin nova:noticies
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: estat.json
+          key: noticies-estat-${{ github.run_id }}
