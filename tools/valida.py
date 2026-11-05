@@ -63,6 +63,9 @@ def main():
             cfg = json.load(f)
         if not isinstance(cfg.get("minAppVersionCode", 0), int):
             errors.append("config.json: 'minAppVersionCode' ha de ser un enter")
+        for k, v in (cfg.get("features") or {}).items():
+            if not isinstance(v, bool):
+                errors.append(f"config.json: 'features.{k}' ha de ser true o false")
     except json.JSONDecodeError as e:
         errors.append(f"config.json no és JSON vàlid: {e}")
     for a in avisos:
