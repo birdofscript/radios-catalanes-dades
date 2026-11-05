@@ -16,7 +16,6 @@ que llegeix l'app:
 Només fa servir la biblioteca estàndard de Python 3.
 """
 import argparse
-import gzip
 import hashlib
 import html
 import json
@@ -38,6 +37,10 @@ from pathlib import Path
 # semblen un navegador (406). Ens identifiquem igualment al final.
 UA = 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Mobile Safari/537.36 DialEC-noticies/1.0'
 SUMMARY_MAX = 300
+# Un titular més llarg que això es talla.
+TITLE_MAX = 200
+# Mida màxima d'un feed, també un cop descomprimit.
+FEED_MAX = 6_000_000
 ZONE_LIMIT = 20
 # Una zona amb menys notícies pròpies que això s'omple amb les de la zona de recanvi.
 ZONE_MIN_OWN = 12
@@ -62,18 +65,26 @@ def fetch(url, timeout=20, tries=2):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': UA, 'Accept-Encoding': 'gzip, deflate'})
             with urllib.request.urlopen(req, timeout=timeout, context=CTX) as r:
-                data = r.read(6_000_000)
+                data = r.read(FEED_MAX)
                 enc = r.headers.get('Content-Encoding', '')
-                if enc == 'gzip':
-                    data = gzip.decompress(data)
-                elif enc == 'deflate':
-                    data = zlib.decompress(data)
+                if enc in ('gzip', 'deflate'):
+                    data = inflate(data, enc)
                 return data
         except Exception as e:  # noqa: BLE001 — qualsevol error de xarxa compta igual
             last = e
             if attempt + 1 < tries:
                 time.sleep(2)
     raise last
+
+
+def inflate(data, enc):
+    """Descomprimeix gzip o deflate amb sostre de mida: una «bomba» comprimida no omple la memòria."""
+    wbits = 16 + zlib.MAX_WBITS if enc == 'gzip' else zlib.MAX_WBITS
+    d = zlib.decompressobj(wbits)
+    out = d.decompress(data, FEED_MAX)
+    if d.unconsumed_tail:
+        raise ValueError(f'feed de més de {FEED_MAX} bytes')
+    return out
 
 
 # ---------- Dates ----------
@@ -118,10 +129,24 @@ def catalan_to_english(s):
 
 # ---------- Text ----------
 
+# Controls C0 i C1 (menys els espais en blanc, que després s'unifiquen) i caràcters de format Unicode que poden
+# amagar o capgirar text: amplada zero, marques bidi i BOM.
+INVISIBLE = re.compile('[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f\u200b-\u200f\u202a-\u202e\u2066-\u2069\ufeff]')
+
+
 def strip_html(s):
     s = re.sub(r'<(script|style)\b.*?</\1>', ' ', s or '', flags=re.S | re.I)
     s = re.sub(r'<[^>]+>', ' ', s)
-    return re.sub(r'\s+', ' ', html.unescape(s)).strip()
+    s = INVISIBLE.sub('', html.unescape(s))
+    return re.sub(r'\s+', ' ', s).strip()
+
+
+def clip_title(t):
+    if len(t) <= TITLE_MAX:
+        return t
+    cut = t[:TITLE_MAX - 1]
+    cut = cut[:cut.rfind(' ')] if ' ' in cut[TITLE_MAX // 2:] else cut
+    return cut.rstrip(' ,.;:') + '…'
 
 
 # Els peus que afegeix WordPress al resum.
@@ -163,6 +188,35 @@ def looks_spanish(text):
     ca = sum(1 for x in w if x in CA_ONLY)
     es = sum(1 for x in w if x in ES_ONLY)
     return es >= 3 and es > 2 * ca
+
+
+# Sufixos públics de dos nivells que surten als mitjans d'aquí; la resta de dominis són «etiqueta.sufix».
+TWO_LEVEL_SUFFIXES = {'com.es', 'org.es', 'nom.es', 'co.uk', 'org.uk', 'com.ad', 'com.fr'}
+
+
+def registrable(host):
+    """Domini registrable d'un host: «www.elpuntavui.cat» → «elpuntavui.cat»."""
+    h = (host or '').lower().strip('.')
+    parts = h.split('.')
+    n = 3 if len(parts) >= 3 and '.'.join(parts[-2:]) in TWO_LEVEL_SUFFIXES else 2
+    return '.'.join(parts[-n:])
+
+
+def allowed_link(url, source):
+    """L'enllaç ha de ser del mateix domini registrable que el feed, o d'un dels `allowedHosts` de la font:
+    així un feed manipulat no pot enviar a una pàgina aliena sota el nom del mitjà."""
+    # La contrabarra i «usuari@» fan que el navegador i urlsplit puguin veure hosts diferents.
+    if '\\' in url or any(c.isspace() for c in url):
+        return False
+    try:
+        p = urllib.parse.urlsplit(url)
+        host = registrable(p.hostname)
+    except ValueError:
+        return False
+    if '@' in p.netloc or '.' not in host:
+        return False
+    feed_host = registrable(urllib.parse.urlsplit(source['url']).netloc)
+    return host == feed_host or host in {registrable(h) for h in source.get('allowedHosts', [])}
 
 
 def canonical_url(u):
@@ -214,7 +268,7 @@ def parse_feed(data):
         fields = {}
         for c in it:
             fields.setdefault(local(c.tag), c)
-        title = strip_html(fields['title'].text if 'title' in fields else '')
+        title = clip_title(strip_html(fields['title'].text if 'title' in fields else ''))
         link = fields.get('link')
         url = ''
         if link is not None:
@@ -258,6 +312,11 @@ def prepare(items, now, source):
     for i in items:
         if contains and contains not in i['url']:
             continue
+        if not allowed_link(i['url'], source):
+            continue
+        # Només https: una pàgina en clar es pot manipular en una wifi oberta. No es comprova per xarxa.
+        if i['url'].startswith('http://'):
+            i['url'] = 'https://' + i['url'][len('http://'):]
         if looks_spanish(i['title'] + ' ' + i['summary']):
             continue
         d = i['date']

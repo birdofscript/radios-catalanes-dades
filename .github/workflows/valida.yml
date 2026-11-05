@@ -4,6 +4,8 @@ on:
     paths: ["v1/**", "tools/valida.py"]
   pull_request:
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   valida:
     runs-on: ubuntu-latest

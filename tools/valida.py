@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Valida v1/stations.json i v1/config.json. Surt amb codi 1 si hi ha errors."""
+"""Valida v1/stations.json, v1/config.json i la coherència d'anuncis i font del temps. Surt amb codi 1 si hi ha errors."""
+import base64
 import json
 import os
 import re
@@ -14,6 +15,37 @@ ID = re.compile(r"^[a-z0-9_]+$")
 
 def es_url(u):
     return isinstance(u, str) and (u.startswith("http://") or u.startswith("https://"))
+
+
+def llegeix_sobre(nom):
+    """Contingut d'un sobre signat de v1/, o None si no existeix. La signatura la comprova qui el fa servir."""
+    cami = os.path.join(ROOT, "v1", nom)
+    if not os.path.exists(cami):
+        return None
+    with open(cami, encoding="utf-8") as f:
+        return json.loads(base64.b64decode(json.load(f)["payloadB64"]))
+
+
+def anuncis_i_temps():
+    """Amb anuncis visibles, el temps ha de venir de MET Norway (Open-Meteo gratuït és només no comercial)."""
+    try:
+        anuncis = llegeix_sobre("anuncis.json")
+    except (ValueError, KeyError, TypeError) as e:
+        return [f"anuncis.json il·legible: {e}"]
+    if anuncis is None:
+        return []
+    formats = anuncis.get("formats") or {}
+    if not ("show" in formats.values() or (anuncis.get("command") == "show" and not formats)):
+        return []
+    try:
+        seccions = llegeix_sobre("seccions.json")
+    except (ValueError, KeyError, TypeError) as e:
+        return [f"seccions.json il·legible: {e}"]
+    font = seccions.get("weatherSource") if seccions else None
+    if font != "met-norway":
+        return [f"anuncis.json mostra anuncis, però la font del temps de seccions.json és {font or 'cap'}: "
+                "ha de ser met-norway (Open-Meteo és només per a ús no comercial)"]
+    return []
 
 
 def main():
@@ -68,6 +100,7 @@ def main():
                 errors.append(f"config.json: 'features.{k}' ha de ser true o false")
     except json.JSONDecodeError as e:
         errors.append(f"config.json no és JSON vàlid: {e}")
+    errors += anuncis_i_temps()
     for a in avisos:
         print("⚠️ ", a)
     for e in errors:

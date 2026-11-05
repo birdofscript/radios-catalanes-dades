@@ -361,7 +361,8 @@
   },
   "elpunt": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/barcelona/nacional.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/barcelona/nacional.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "eltemps": {
    "name": "El Temps",
@@ -429,7 +430,8 @@
   },
   "epa-rossello": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/rossello.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/rossello.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "vilaweb-cn": {
    "name": "VilaWeb",
@@ -445,7 +447,8 @@
   },
   "epa-santcugat": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/santcugatdelvalles.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/santcugatdelvalles.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "radiosabadell": {
    "name": "Ràdio Sabadell",
@@ -461,7 +464,8 @@
   },
   "epa-sabadell": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/sabadell.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/sabadell.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "canalterrassa": {
    "name": "Canal Terrassa",
@@ -473,11 +477,13 @@
   },
   "epa-terrassa": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/terrassa.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/terrassa.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-vallesocc": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/vallesoccidental.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/vallesoccidental.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "el9nou-vo": {
    "name": "El 9 Nou",
@@ -486,11 +492,13 @@
   },
   "epa-vallesor": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/vallesoriental.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/vallesoriental.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-lagarriga": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/lagarriga.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/lagarriga.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "el9nou-osona": {
    "name": "El 9 Nou",
@@ -503,11 +511,13 @@
   },
   "epa-osona": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/osona.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/osona.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-vic": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/vic.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/vic.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "diarigirona": {
    "name": "Diari de Girona",
@@ -515,11 +525,13 @@
   },
   "epa-girona": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/girona.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/girona.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-girones": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/girones.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/girones.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "garrotxadigital": {
    "name": "Garrotxa Digital",
@@ -527,11 +539,13 @@
   },
   "epa-olot": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/olot.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/olot.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-garrotxa": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/garrotxa.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/garrotxa.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "radiopalafrugell": {
    "name": "Ràdio Palafrugell",
@@ -547,19 +561,23 @@
   },
   "epa-baixemporda": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/baixemporda.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/baixemporda.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-palafrugell": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/palafrugell.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/palafrugell.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-selva": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/selva.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/selva.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-blanes": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/blanes.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/blanes.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "segre": {
    "name": "Segre",
@@ -579,11 +597,13 @@
   },
   "epa-lleida": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/lleida.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/lleida.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-segria": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/segria.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/segria.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "novatarrega": {
    "name": "Nova Tàrrega",
@@ -591,11 +611,13 @@
   },
   "epa-tarrega": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/tarrega.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/tarrega.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-urgell": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/urgell.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/urgell.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "tarragonaradio": {
    "name": "Tarragona Ràdio",
@@ -615,11 +637,13 @@
   },
   "epa-tarragona": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/tarragona.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/tarragona.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-tarragones": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/tarragones.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/tarragones.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "imagina": {
    "name": "Imagina Ràdio",
@@ -635,19 +659,23 @@
   },
   "epa-montsia": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/montsia.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/montsia.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-baixebre": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/baixebre.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/baixebre.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-amposta": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/amposta.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/amposta.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-tortosa": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/tortosa.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/tortosa.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "regio7": {
    "name": "Regió7",
@@ -659,11 +687,13 @@
   },
   "epa-bergueda": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/bergueda.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/bergueda.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-puigreig": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/puigreig.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/puigreig.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "radiocalella": {
    "name": "Ràdio Calella",
@@ -675,11 +705,13 @@
   },
   "epa-maresme": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/maresme.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/maresme.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-calella": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/calella.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/calella.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "beteve": {
    "name": "Betevé",
@@ -688,15 +720,18 @@
   "epa-barcelones": {
    "name": "El Punt Avui",
    "url": "https://www.elpuntavui.cat/comarca/barcelones.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"],
    "allowGeneric": true
   },
   "epa-badalona": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/badalona.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/badalona.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-baixllob": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/comarca/baixllobregat.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/comarca/baixllobregat.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "fetasantfeliu": {
    "name": "Fet a Sant Feliu",
@@ -704,15 +739,18 @@
   },
   "epa-santboi": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/santboidellobregat.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/santboidellobregat.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-santjust": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/santjustdesvern.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/santjustdesvern.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   },
   "epa-castelldefels": {
    "name": "El Punt Avui",
-   "url": "https://www.elpuntavui.cat/castelldefels.feed?type=rss"
+   "url": "https://www.elpuntavui.cat/castelldefels.feed?type=rss",
+   "allowedHosts": ["lesportiudecatalunya.cat"]
   }
  }
 }
