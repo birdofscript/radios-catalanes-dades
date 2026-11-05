@@ -53,4 +53,9 @@ jobs:
         run: |
           espera=$(( INICI + 840 - $(date +%s) ))
           if [ "$espera" -gt 0 ]; then sleep "$espera"; fi
-          gh workflow run noticies.yml --repo "${{ github.repository }}" --ref main
+          for i in 1 2 3 4 5; do
+            if gh workflow run noticies.yml --repo "${{ github.repository }}" --ref main; then exit 0; fi
+            echo "No s'ha pogut encadenar (intent $i); torno a provar d'aquí a 30 s"
+            sleep 30
+          done
+          exit 1
